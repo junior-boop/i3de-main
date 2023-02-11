@@ -73,9 +73,7 @@ export default function Ressource(){
 
 
 export function ImageItem({image, onClick, id}){
-    const la08iemeImage = () =>{
-
-    }
+    
     return(
         <div className="col-6 col-md-3 d-flex mb-4 justify-content-center" onClick={onClick}>
             <div className="col-12 p-0" style={{backgroundImage : `url(${image})`, backgroundPosition : 'center', backgroundSize : 'cover', aspectRatio : 1, backgroundColor : "silver", borderRadius : 12, cursor : 'pointer'}}>
