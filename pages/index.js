@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>I3DE | L'impression 3D pour l'Éducation</title>
+        <Title text={"L'impression 3D pour l'Éducation"} />
       </Head>
       <Header />
       <Mission />
@@ -34,4 +34,9 @@ export default function Home() {
       </Container>
     </>
   )
+}
+
+
+function Title({text}){
+  return <title>{text}</title>
 }
