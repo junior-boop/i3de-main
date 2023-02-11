@@ -11,12 +11,12 @@ export default function Inscription(){
             
             <div className="inscription_section">
                 <div className="cadre">
-                    <div class="titre">Bénéficiez du programme</div>
+                    <div className="titre">Bénéficiez du programme</div>
                     <div>it is often said that the pursuance of integrated collection of software engineering standards minimizes influence of the setting of functional event(Heriberto Milard in the book of the application rules)</div>
                 </div>
                 <div className="cadre desc">
-                    <div class="header">Particulier</div>
-                    <div class="content">
+                    <div className="header">Particulier</div>
+                    <div className="content">
                         <ul>
                             <li>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée  </li>
                             <li>Le lorem ipsum est, en imprimerie, une suite de mots sans signification </li>
@@ -24,13 +24,13 @@ export default function Inscription(){
                             <li>Le lorem ipsum est, en  utilisée à titre </li>
                         </ul>
                     </div>
-                    <button class="footer">
+                    <button className="footer">
                         Inscrivez-vous
                     </button>
                 </div>
                 <div className="cadre desc">
-                <div class="header">Etablissement Scolaire</div>
-                    <div class="content">
+                <div className="header">Etablissement Scolaire</div>
+                    <div className="content">
                         <div>
                             <ul>
                                 <li>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée  </li>
@@ -43,7 +43,7 @@ export default function Inscription(){
                         </div>
                         
                     </div>
-                    <button class="footer">
+                    <button className="footer">
                         Contactez-nous
                     </button>
                 </div>
