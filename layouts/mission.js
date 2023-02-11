@@ -9,7 +9,9 @@ export default function Mission(){
                     <div className="h3 color-white"> Contribuer à l'amélioration de la qualité des apprentissages dans l'enseignement secondaire</div>
                 </div>
             </div>
-            <div className="modele container" style={{backgroundImage:"url(/assets/images/impression_3d_2.jpg)"}}></div>
+            <div className="modele container">
+                <video  src="/background_Large.mp4"  width={'100%'} controls = {false} type = {'video/mp4'} autoplay ></video>
+            </div>
             <div className="white-gradient"></div>
         </section>
     )

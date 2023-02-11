@@ -24,11 +24,11 @@ export default function Header(){
             <div className="sup">
                 <div className="background"></div>
                 <div className="container">
-                    <div className='h3 w-100 mt-3'>L'impression 3D pour l'Éducation</div>
+                    <div className='speech h3 mt-3'>L'impression 3D pour l'Éducation</div>
                     <div className="text_1 grand-titre text-gradient Montserrat">
                         Une solution pratique
                     </div>
-                    <div  className="text_2 titre w-100">
+                    <div  className="text_2 h1 w-100 Montserrat">
                         Pour l'enseignement
                     </div>
                 </div>

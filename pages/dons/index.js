@@ -9,13 +9,7 @@ export default function Actualite (){
             <Head>
                 <title>Actualite | I3DE </title>
             </Head>
-            <div className="container-fluid donate" style={{backgroundImage : 'url("/donate.png")', backgroundPosition : 'center center', backgroundRepeat : 'no-repeat', backgroundSize : 'cover', display : 'flex', alignItems : "center"}}>
-                <div className={Style.container}>
-                    <div className="titre w-100 py-5 top">
-                        Faites un don
-                    </div>
-                </div>
-            </div>
+            <Bannier name={'Faites un don'} />
             <div className={Style.container}>
                 <div className="vide"/>
                 <Titre titre={'Pourquoi faire un don à l\'I3DE ?'} />
