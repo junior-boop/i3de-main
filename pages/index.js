@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>I3DE | L'impression 3D pour l'Éducation</title>
       </Head>
       <Header />
       <Mission />
