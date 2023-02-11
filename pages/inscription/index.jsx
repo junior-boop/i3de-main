@@ -25,7 +25,7 @@ export default function Inscription(){
                         </ul>
                     </div>
                     <button class="footer">
-                        s'inscrire
+                        Inscrivez-vous
                     </button>
                 </div>
                 <div className="cadre desc">

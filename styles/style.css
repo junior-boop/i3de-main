@@ -633,7 +633,7 @@ header p {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    background: radial-gradient(circle, #fb6203 0%, #ff2f2f 100%);
+    background: radial-gradient(circle, #fb6203 0%, #992a36  100%);
     background-blend-mode: normal;
     
 }

@@ -22,13 +22,13 @@ export default function Home() {
       <Head>
         <Title text={"L'impression 3D pour l'Éducation"} />
       </Head>
+      <div className='vide'></div>
       <Header />
       <Mission />
       <Beneficiaire />
       <Objectifs />
       <Schema />
       <Principal />
-      <VideoPresentation />
       <Testimony /> 
       <Container>
       </Container>
