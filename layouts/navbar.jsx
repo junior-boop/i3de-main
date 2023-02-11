@@ -94,7 +94,12 @@ export default function NavBar(){
                                 <li onClick={handleVisibility}><Link href="/ressource">Ressources</Link></li>
                                 <li onClick={handleVisibility}><Link href="/actualites">Actualités</Link></li>
                                 <li onClick={handleVisibility}><Link href="/contact-us">Contactez-nous</Link></li>
-                                <button style={{border : '3px solid var(--bg-color-orange)', borderRadius : 10, padding : '7px 20px', backgroundColor : 'transparent', margin : '12px 0', color : 'var(--bg-color-orange-rouge)', fontWeight :'700'}}>Inscrivez-vous</button>
+                               
+                                    <button style={{border : '3px solid var(--bg-color-orange)', borderRadius : 10, padding : '7px 20px', backgroundColor : 'transparent', margin : '12px 0', color : 'var(--bg-color-orange-rouge)', fontWeight :'700'}}>
+                                        <Link href={'/inscription'} >
+                                            Inscrivez-vous
+                                        </Link>
+                                    </button>
                             </ul>
                         </div>
                         <div>

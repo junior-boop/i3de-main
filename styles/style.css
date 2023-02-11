@@ -1704,3 +1704,99 @@ img, svg {
 .Element.element .images_element {
     box-shadow: none;
 }
+
+
+
+.inscription_section {
+    display: flex;
+    gap: 24px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+/* .inscription_section * {
+    font-size: 16px;
+} */
+
+.inscription_section .cadre {
+    flex: 1;
+    
+}
+.inscription_section .cadre > .titre {
+   margin-bottom: 16px;
+}
+.inscription_section .cadre > div:last-child {
+   font-size: 16px;
+}
+
+.inscription_section .cadre.desc {
+    background-color: #f1f1f1;
+    position: relative;
+    height: 500px;
+}
+
+.inscription_section .cadre.desc > .footer, 
+.inscription_section .cadre.desc > .header
+{
+    display: flex ;
+    height: 58px;
+    width: 100%;
+}
+
+.inscription_section .cadre.desc > .footer {
+    font-size: x-large;
+    border: none;
+    outline: 1px solid transparent;
+    background-color: #c12227;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.inscription_section .cadre.desc > .header{
+    color: #c12227;
+    align-items: center;
+    padding: 0 24px;
+    font-family: Montserrat ;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.inscription_section .cadre.desc > .content {
+    padding: 0 24px;
+}
+.inscription_section .cadre.desc > .content  li+li {
+    margin-top: 12px;
+}
+.inscription_section .cadre.desc > .content * {
+    font-size: 16px;
+}
+.col{
+    color: #992a36;
+    padding: 24px;
+    font-family: Comfortaa ;
+    font-size: 18px;
+    font-weight: 700;
+}
+.cadre.desc1{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+background-color: #f1f1f1;
+}
+.footer2{
+    height: 48px;
+    width: 100%;
+    background-color: #992a36;
+    border: none;
+    font-size: x-large;
+}
+.mag{
+    margin-top: -17px;
+}
+ li::marker{
+    color: #c12227;
+}
