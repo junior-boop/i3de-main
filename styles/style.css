@@ -1820,4 +1820,6 @@ background-color: #f1f1f1;
    padding: 24px;
    border-radius: 16px;
    flex: 1;
+   font-size: 16px;
+   color: white
 }
