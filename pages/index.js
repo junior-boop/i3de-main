@@ -12,6 +12,7 @@ import Testimony from '../layouts/temoignage'
 import styles from '../styles/Home.module.css'
 
 import InitFireBase from '../firebase'
+import Cible from '../layouts/cible'
 
 
 InitFireBase()
@@ -27,6 +28,7 @@ export default function Home() {
       <Mission />
       <Beneficiaire />
       <Objectifs />
+      <Cible />
       <Schema />
       <Principal />
       <Testimony /> 

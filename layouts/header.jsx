@@ -26,10 +26,10 @@ export default function Header(){
                 <div className="container">
                     <div className='speech h3 mt-3'>L'impression 3D pour l'Éducation</div>
                     <div className="text_1 grand-titre text-gradient Montserrat">
-                        Une solution pratique
+                        Une solution pratique,
                     </div>
-                    <div  className="text_2 h1 w-100 Montserrat">
-                        Pour l'enseignement
+                    <div  className="text_2 h1 w-50 Montserrat">
+                        abordable et durable pour la professionnalisation des enseignements
                     </div>
                 </div>
             </div>
