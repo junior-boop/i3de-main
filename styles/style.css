@@ -1808,15 +1808,16 @@ background-color: #f1f1f1;
 }
 #cible .cible {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 24px;
     width: 100%;
 
 }
 #cible .calque_cible {
-   background-color: rgba(255, 255, 255, 0.398);
+   background-color: rgba(0, 0, 0, 0.398);
    backdrop-filter: blur(5px);
-   height: 200px;
+   min-height: 200px;
+   height: auto;
    padding: 24px;
    border-radius: 16px;
    flex: 1;
