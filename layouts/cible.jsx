@@ -1,5 +1,4 @@
 import Container from "../composants/container";
-import Titre from "../composants/titre";
 
 export default function Cible(){
     return(
