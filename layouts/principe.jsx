@@ -8,9 +8,8 @@ export default function Principal(){
         <>
         <div className="vide"></div>
         <div className="vide"></div>
-        <h1 className='w-100 text-center mt-5'>
-            Les 04 Piliers
-        </h1>
+        
+        <div className="titre w-100 text-center py-4"> Bénéficiaires </div>
         
         <section className={Style.container} style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap', paddingTop : '64px', paddingBottom : 64}}>
             <Element className={'rand-4 rand-4-phone'} 
@@ -40,7 +39,6 @@ export default function Principal(){
             >
                 <div className="Element_first">
                     <div className="images_element top" style={{backgroundImage : `url(./assets/images/bouteille_fillament.jpg)`}}>
-                        {/* <img src="./assets/images/bouteille_fillament.jpg" alt="" width={'100%'} /> */}
                     </div>
                 </div>
             </Element>
