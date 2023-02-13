@@ -11,13 +11,14 @@ export default function Principal(){
         <h1 className='w-100 text-center mt-5'>
             Les 04 Piliers
         </h1>
+        
         <section className={Style.container} style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap', paddingTop : '64px', paddingBottom : 64}}>
             <Element className={'rand-4 rand-4-phone'} 
-            title = {'Contribution Écologique'} 
-            texte = {"Réduction de l'empreinte carbone via la réutilisation (recyclage à moyen terme) ds déchets plastiques pour améliorer l'approvisionnement en filament pour les impression"}
+            title = {'Renforcement du capital humain'} 
+            texte = {"Les enseignants enrôles dans le projet I3DE pourrant créer des kits éducatifs adapté aux besoins des élèves. Cela facilitera, pour l\'enseignement comme l\'apprenant l\'apprentissage de certaines matieres et concepts avec l\'utlisation du matériel pédagogique adapté et representatif des objets enseignés desormais imprimés en 3D"}
             >
                 <div className="Element_first">
-                    <div className="images_element" style={{backgroundImage : `url(./assets/images/bouteille_fillament.jpg)`}}>
+                    <div className="images_element" style={{backgroundImage : `url(./assets/images/apprenant.jpg)`}}>
                         
                     </div>
                 </div>
@@ -34,12 +35,12 @@ export default function Principal(){
                 </div>
             </Element>
             <Element className={'rand-2 rand-4-phone element'}
-                title = {'Renforcement du capital humain'}
-                texte = {'Les enseignants enrôles dans le projet I3DE pourrant créer des kits éducatifs adapté aux besoins des élèves. Cela facilitera, pour l\'enseignement comme l\'apprenant l\'apprentissage de certaines matieres et concepts avec l\'utlisation du matériel pédagogique adapté et representatif des objets enseignés desormais imprimés en 3D'}
+                title = {'Contribution Écologique'}
+                texte = {'Réduction de l\'empreinte carbone via la réutilisation (recyclage à moyen terme) ds déchets plastiques pour améliorer l\'approvisionnement en filament pour les impression'}
             >
                 <div className="Element_first">
-                    <div className="images_element top">
-                        <img src="./assets/images/detourage_2.png" alt="" width={'100%'} />
+                    <div className="images_element top" style={{backgroundImage : `url(./assets/images/bouteille_fillament.jpg)`}}>
+                        {/* <img src="./assets/images/bouteille_fillament.jpg" alt="" width={'100%'} /> */}
                     </div>
                 </div>
             </Element>

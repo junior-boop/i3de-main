@@ -8,7 +8,7 @@ export default function Cible(){
             </div>
             <Container>
                 <div className="cible">
-                    <Calque image={'./assets/images/apprenant.jpg'}>
+                    <Calque image={'./assets/images/impression_3d_2.jpg'}>
                        <div className="h3 w-100 mb-3">
                         Pour les apprenants
                        </div>

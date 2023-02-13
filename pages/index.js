@@ -24,7 +24,7 @@ export default function Home() {
       <Beneficiaire />
       <Objectifs />
       <Cible />
-      <Schema />
+      {/* <Schema /> */}
       <Principal />
       <Testimony /> 
       <Container>

@@ -10,7 +10,7 @@ export default function Mission(){
                 </div>
             </div>
             <div className="modele container">
-                <video  src="/background_Large.mp4"  width={'100%'} controls = {false} type = {'video/mp4'} autoplay ></video>
+                <video  src="/background_Large.mp4"  width={'100%'} controls = {false} type = {'video/mp4'} muted autoPlay = {true}></video>
             </div>
             <div className="white-gradient"></div>
         </section>
