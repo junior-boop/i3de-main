@@ -9,6 +9,7 @@ import Principal from '../layouts/principe'
 import Testimony from '../layouts/temoignage'
 
 import Cible from '../layouts/cible'
+import Services from '../layouts/services'
 
 
 
@@ -26,7 +27,9 @@ export default function Home() {
       <Cible />
       {/* <Schema /> */}
       <Principal />
-      <Testimony /> 
+      <Services />
+      {/* <Testimony />  */}
+
       <Container>
       </Container>
     </>

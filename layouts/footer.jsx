@@ -19,7 +19,7 @@ export default function Footer(){
                                 Continuous Liquid Interface Production (CLIP)
                             </li>
                             <li>
-                                Frittage Selective Laser Sintering (SLS)
+                                Frittage Sélective Laser Sintering (SLS)
                             </li>
                             <li>
                             Selective Laser Melting (SLM)
@@ -28,45 +28,45 @@ export default function Footer(){
                     </div>
                     <div className="col-md-4">
                         <h5>
-                            Autres domaines d'application dans l'I3D 
+                            Autres domaines d'application dans l'I3DE
                         </h5>
                         <ul>
                             <li>
-                                L'Aeronautique
+                                L'Aéronautique
                             </li>
                             <li>
-                                Construction
+                                La Construction
                             </li>
                             <li>
-                                l'industrie automobile
+                                L'industrie automobile
                             </li>
                             <li>
-                                la mode
+                                La mode
                             </li>
                             <li>
-                                la nourriture
+                                La nourriture
                             </li>
                             <li>
-                            les Etudes scientifiques
+                            Les Études scientifiques
                             </li>
                         </ul>
                     </div>
                     <div className="col-md-4">
                         <h5>
-                        Materiaux pour I3D
+                        Matériaux pour I3DE
                         </h5>
                         <ul>
                             <li>
-                                les plastiques
+                                Les plastiques
                             </li>
                             <li>
-                            les metaux
+                                Les métaux
                             </li>
                             <li>
-                                la ceramique
+                                La céramique
                             </li>
                             <li>
-                                tissu humain (ou cuire de vache)
+                                Tissu humain (ou cuire de vache)
                             </li>
                         </ul>
                     </div>

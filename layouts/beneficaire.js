@@ -14,6 +14,7 @@ export default function Beneficiaire(){
                     <Card_Beneficiate numerique={`+6K`} desc={`Les éleves des établissements ciblé`} />
                     <Card_Beneficiate numerique={'04'} desc={`Régions et les communautés éducatives régionales`} />
                 </Container>
+                
             </div>
         </>
     )
