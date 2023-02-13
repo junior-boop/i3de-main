@@ -1954,3 +1954,21 @@ background-color: #f1f1f1;
     font-size: 16px;
     font-weight: 600;
 }
+
+#partenaire .items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    
+}
+#partenaire .items .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+#partenaire .items .content div:last-child{
+    gap: 12px;
+}

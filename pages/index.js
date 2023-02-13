@@ -11,6 +11,7 @@ import Testimony from '../layouts/temoignage'
 import Cible from '../layouts/cible'
 import Services from '../layouts/services'
 import Edition from '../layouts/edition'
+import Partenaire from '../layouts/partenaires'
 
 
 
@@ -31,6 +32,7 @@ export default function Home() {
       <Services />
       {/* <Testimony />  */}
       <Edition />
+      <Partenaire />
     </>
   )
 }
