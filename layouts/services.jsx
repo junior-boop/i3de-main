@@ -5,7 +5,7 @@ import { CarbonToolKit, Iconoir3dSelectFace, TeenyiconsCertificateOutline } from
 export default function Services(){
     return(
         <div id="Services">
-            <div className="titre w-100 text-center py-5 "> Services </div>
+            <div className="titre w-100 text-center py-5 "> Nos Services </div>
             <Container>
                 <div className="services row">
                     <Service icon={<TeenyiconsCertificateOutline style = {{ width : 48, height : 48}} />} image={'./assets/prototype/prototype_7.jpg'} titre={'Formation certifiante '} texte={"Vous êtes apprenants, artisans, techniciens? Nous vous offrons une formation professionnelle hautement pratique et certifiante qui vous permet de non seulement de manipuler des matériaux et logiciels de modélisation, d’impression 3D; Mais surtout la création d’entreprise ou de carrière autour de l'impression 3D. "} button={'Candidater'} url="/candidater"/>

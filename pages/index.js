@@ -10,6 +10,7 @@ import Testimony from '../layouts/temoignage'
 
 import Cible from '../layouts/cible'
 import Services from '../layouts/services'
+import Edition from '../layouts/edition'
 
 
 
@@ -29,9 +30,7 @@ export default function Home() {
       <Principal />
       <Services />
       {/* <Testimony />  */}
-
-      <Container>
-      </Container>
+      <Edition />
     </>
   )
 }
