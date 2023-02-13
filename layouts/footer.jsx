@@ -74,7 +74,7 @@ export default function Footer(){
             </div>
             </section>
 
-            <section className="container-fluid footer_section bg-special">
+            <section className="footer_section bg-special">
                 <p className="color-white px-3">
                     Copyright &copy; 2022 All Rights Reserved By <a className="color-white" href="https://html.design/">CAYSTI Corp</a>
                 </p>

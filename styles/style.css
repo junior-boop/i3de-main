@@ -1955,13 +1955,16 @@ background-color: #f1f1f1;
     font-weight: 600;
 }
 
+#partenaire .partenaire{
+   gap: 24px;    
+}
 #partenaire .items{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: auto;
     height: 150px;
-    
+    min-width: 150px;
 }
 #partenaire .items .content{
     display: flex;
