@@ -9,7 +9,7 @@ export default function Cible(){
             </div>
             <Container>
                 <div className="cible">
-                    <Calque>
+                    <Calque image={'./assets/images/apprenant.jpg'}>
                        <div className="h3 w-100 mb-3">
                         Pour les apprenants
                        </div>
@@ -20,7 +20,7 @@ export default function Cible(){
                         Fournir aux artisans et aux étudiants des outils et compétences en matière de conception et de fabrication pour créer des prototypes et des produits finis, personnalisés et même uniques.
                        </Paragraphe>
                     </Calque>
-                    <Calque>
+                    <Calque inverse image={'./assets/images/formateur.jpg'}>
                         <div className="h3 w-100 mb-3">
                             Pour les enseignants / formateurs
                         </div>
@@ -31,7 +31,7 @@ export default function Cible(){
                        Permettre aux enseignants de créer des objets pour des projets d'apprentissage : Les enseignants peuvent utiliser l'impression 3D pour créer des objets qui peuvent être utilisés dans des projets d'apprentissage. Cela permet aux étudiants de mieux comprendre les concepts et de les appliquer à des projets concrets et des expériences pratiques. 
                        </Paragraphe>
                     </Calque>
-                    <Calque>
+                    <Calque image={'./assets/images/photo-17.jpg'}>
                         <div className="h3 w-100 mb-3">
                             Pour les artisans, les entreprises et industries
                         </div>
@@ -48,17 +48,21 @@ export default function Cible(){
     )
 }
 
-function Calque({children}){
+function Calque({children, image, inverse}){
+
+    const checkInverse = inverse ? 'inverse' : '';
+
     return(
-        <div className="calque_cible">
-            {children}
+        <div className={`calque_cible ${checkInverse}`}>
+            <div className="cadre left" children = {children} />
+            <div className="cadre right" style={{backgroundImage : `url(${image})`}} />
         </div>
     )
 }
 
 function Paragraphe({children}){
     return(
-        <p style={{fontSize : 14, fontWeight : '400', marginBottom : 12}}>
+        <p style={{fontSize : 18, fontWeight : '400', marginBottom : 12}}>
             {children}
         </p>
     )

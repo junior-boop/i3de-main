@@ -1804,23 +1804,36 @@ background-color: #f1f1f1;
 #cible {
     background-image: var(--btn-color);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 64px;
 }
-#cible .cible {
-    display: flex;
-    /* align-items: center; */
-    gap: 24px;
-    width: 100%;
 
-}
 #cible .calque_cible {
-   background-color: rgba(0, 0, 0, 0.398);
-   backdrop-filter: blur(5px);
-   min-height: 200px;
-   height: auto;
-   padding: 24px;
-   border-radius: 16px;
-   flex: 1;
-   font-size: 16px;
-   color: white
+   display: flex;
+   gap : 24px
+}
+#cible .calque_cible.inverse {
+   flex-direction: row-reverse;
+}
+#cible .calque_cible > .cadre {
+  flex: 1;
+  padding: 36px;
+  color: white;
+}
+#cible .calque_cible + .calque_cible {
+  margin-top: 64px;
+}
+#cible .calque_cible > .left {
+  padding-left: 64px;
+}
+#cible .calque_cible.inverse > .left {
+  padding-right: 64px;
+}
+#cible .calque_cible > .right {
+  aspect-ratio: 1;
+  background-color: silver;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
 }

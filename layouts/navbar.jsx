@@ -34,7 +34,7 @@ export default function NavBar(){
             if(window.location.pathname !== '/dons'){
                 return (
                     <Link  href={'/dons'}>
-                        <button>Faites un don</button>
+                        <button>Faire un don</button>
                     </Link>
                 )
             } else {
