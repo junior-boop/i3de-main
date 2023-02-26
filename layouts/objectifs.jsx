@@ -38,8 +38,8 @@ function Point({duree, x, y, list, ville}){
     return (
        <div className="point" style={{position : 'absolute', top : `${y}px`, left : `${x}px` }}>
             <div style={{position : 'relative'}}>
-                <div className="wave" style={{position : 'absolute', animationDuration : `${duree}s`}}></div>
-                <div className="bg-special round" style={{ width : 24, height : 24, borderRadius : 15, }}></div>
+                <div className="wave" style={{width : 20 + (4 * list.length), position : 'absolute', aspectRatio : '1', animationDuration : `${duree}s`}}></div>
+                <div className="bg-special round" style={{ width : 20 + (4 * list.length), aspectRatio : '1', borderRadius : 15, display : 'flex', alignItems : 'center', justifyContent : 'center', color : 'white' }}>{list.length}</div>
                 <div className="over">
                     <div style={{fontWeight : 500}}>{ville}</div>
                     {liste}

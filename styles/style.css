@@ -476,7 +476,7 @@ header p {
     position: absolute;
     top: 0;
     left: 0;
-    background-image:linear-gradient(90deg, white 0%, transparent 50%) ;
+    background-image:linear-gradient(90deg, rgb(0, 0, 0) 0%, transparent 50%) ;
     width: 100%;
     height: 100%;
 }
@@ -633,78 +633,141 @@ header p {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    background: radial-gradient(circle, #fb6203 0%, #992a36  100%);
+    background:white;
     background-blend-mode: normal;
-    
-}
-
-#presentation.show .titre, 
-#presentation.show .color-white 
- {
-    animation: titre 1.5s ease-in-out;
-}
-
-
-@keyframes titre {
-    0% { opacity: 0; transform: translateY(50px)}
-    50% { opacity: 1}
-    100% {transform: translateY(0px);}
+    display: flex;
+    align-items: center;
+    padding: 120px 0;
 }
 
 #presentation .container {
+    height: 70%;
     display: flex;
-    flex-direction: column;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+#presentation .container > .secteur {
+    display: flex;
     align-items: center;
-    padding: 64px 0;
+    justify-content: flex-end;
 
-}
-
-#presentation .white-gradient {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    background-blend-mode: normal;
-}
-
-#presentation p {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-#presentation .modele {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 700px;
-    margin: 64px auto;
-    border-radius: 30px;
+    height: 530px;
     position: relative;
-    z-index: 10;
-}
-#presentation .modele.container {
-   padding: 0;
-}
-#presentation .modele video {
-   object-fit: cover;
-   object-position: center;
-   width: 100%;
-   border-radius: 36px;
 }
 
-#presentation .modele.show  {
-    animation: titre 1.5s ease-in-out;
+#presentation .container > .secteur .image {
+    height : 100% ;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    background-color: silver;
+}
+#presentation .container > .secteur .cercle {
+    width : 150px ;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(210deg, #C22127 50%, #F47A37 100%);
+    position: absolute;
+    bottom: 24px;
+    right: -70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+#presentation .container > .secteur .cercle .num{
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+}
+
+#presentation .container > .secteur .desc {
+    width: 530px;
+    min-height: 200px;
+}
+#presentation .container > .secteur .desc .label_desc {
+   padding: 7px 12px;
+   background-color: #C22127;
+   color: white;
+   width: max-content;
+   text-transform: uppercase;
+}
+#presentation .container > .secteur .desc .titre_desc {
+    font-size: 38px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 12px;
+    font-family: Comfortaa;
+}
+#presentation .container > .secteur .desc > .text{
+   color : black;
+   font-size: 18px ;
+   font-weight: 600;
+}
+#presentation .container > .secteur .desc .text + .text {
+    margin-top: 12px;
+    font-size: 16px ;
+   font-weight: 400;
+}
+
+@media (max-width : 756px) {
+    #presentation {
+        width: 100%;
+        min-height: 100vh;
+        padding: 64px 0;
+    }    
+    #presentation .container {
+        min-height: 100vh;
+        display: block;
+        width: 100vw;
+    }
+
+    #presentation .container > .secteur + .secteur {
+        margin-top: 76px;
+    }
+
+    #presentation .container > .secteur {
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #presentation .container > .secteur .image {
+        width: 100%;
+        aspect-ratio: 3/4;
+        border-radius: 16px;
+        background-color: silver;
+    }
+
+    #presentation .container > .secteur .cercle {
+        width : 120px ;
+        bottom: -48px;
+        right: 24px;
+    }
+
+    #presentation .container > .secteur .cercle .num{
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    #presentation .container > .secteur .desc .titre_desc {
+        font-size: 36px;
+       
+    }
+
+    #presentation .container > .secteur .desc > .text{
+        color : black;
+        font-size: 18px ;
+        font-weight: 800;
+     }
 }
 
 
-@keyframes titre {
-    0% { opacity: 0; transform: translateY(100px)}
-    50% { opacity: 1}
-    100% {transform: translateY(0px);}
-}
-
+/* fin de presentation */
 
 /* Application */
 
@@ -1289,8 +1352,6 @@ header p {
 }
 
 .wave {
-    width: 24px;
-    height: 24px;
     border: 3px solid var(--bg-color-orange-rouge);
     border-radius: 15px;
     animation-name: wave;
@@ -1313,6 +1374,7 @@ header p {
     }
 }
 
+
 .point .over {
     position: absolute;
     bottom:28px;
@@ -1323,10 +1385,11 @@ header p {
     font-size: 12px;
     background-image: var(--btn-color) ;
     color: white;
-    height: 0;
+    height: 1px;
     opacity: 0;
     transition: all .3s ease-in-out;
     z-index: 10;
+    visibility: hidden;
 }
 
 .point .over > li {
@@ -1338,6 +1401,7 @@ header p {
 .point:hover  .over {
     opacity: 1;
     height: auto;
+    visibility: visible;
 }
 
 #video {

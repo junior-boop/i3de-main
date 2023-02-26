@@ -28,7 +28,7 @@ export default function Header(){
                     <div className="text_1 grand-titre text-gradient Montserrat">
                         Une solution pratique,
                     </div>
-                    <div  className="text_2 h1 w-50 Montserrat">
+                    <div  className="text_2 h1 w-50 Montserrat color-white">
                         abordable et durable pour la professionnalisation des enseignements
                     </div>
                 </div>
