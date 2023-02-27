@@ -20,6 +20,9 @@ export default function Partenaire(){
                </div>
                <div className="partenaire row justify-content-center">
                     <Items>
+                        <img src="./assets/prototype/pricnac.png" height={'100%'}/>
+                    </Items>
+                    <Items>
                         <img src="./assets/prototype/auf.png" height={'100%'}/>
                     </Items>
                     <Items>

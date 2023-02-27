@@ -2039,3 +2039,35 @@ background-color: #f1f1f1;
 #partenaire .items .content div:last-child{
     gap: 12px;
 }
+
+/* process */
+
+.process .label_titre {
+    width: max-content;
+    padding: 7px 16px;
+    margin-bottom: 12px;
+    background-color: #C22127 ;
+    color: white;
+}
+
+.element_li {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 18px;
+}
+.element_li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #c221261c;
+}
+
+.element_li + .element_li {
+    margin-top: 18px;
+}
+
+/* fin process */
