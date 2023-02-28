@@ -1701,6 +1701,7 @@ img, svg {
 }
 .card_Beneficiate .desc {
     text-align: center;
+    font-size: 17px;
 }
 
 .Element {
@@ -1903,12 +1904,12 @@ background-color: #f1f1f1;
 }
 
 #Services {
-    background-color: #313131;
-    padding: 24px 0 64px;
+    background-color: #f3f3f3;
+    padding: 48px 0 96px;
 }
 
 #Services .titre {
-    color: white;
+    color: black;
 }
 
 
@@ -1923,7 +1924,7 @@ background-color: #f1f1f1;
     transition: all .3s ease-in-out;
 }
 .service_cadre:hover {
-    box-shadow: 0 0 20px -5px black;
+    box-shadow: 0 0 20px -5px rgb(205, 205, 205);
 }
 .service_cadre > .image {
     width:100%;
@@ -2050,6 +2051,26 @@ background-color: #f1f1f1;
     color: white;
 }
 
+.process .haut {
+    margin-bottom: 18px;
+ }
+
+.process .bas {
+    height: 78px;
+    width: 100%;
+    display: flex;
+    align-items: center ;
+}
+.process .bas button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-image: var(--btn-color) ;
+    background-color: #C22127;
+    color: white;
+}
+
 .element_li {
     display: flex;
     align-items: flex-start;
@@ -2068,6 +2089,25 @@ background-color: #f1f1f1;
 
 .element_li + .element_li {
     margin-top: 18px;
+}
+
+@media (max-width : 756px) {
+    
+    .process .haut {
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    .process .haut h1 {
+       text-align: center;
+    }
+
+    .process .bas {
+        justify-content: center;
+        margin: 18px 0;
+    }
 }
 
 /* fin process */

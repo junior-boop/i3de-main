@@ -9,9 +9,9 @@ export default function Objectifs() {
             <Container cName="d-flex justify-content-center">
                 <div className=" col-12 col-md-9 row p-0">
                     <div className="col-12 col-md-6 col-lg-6 p-0" >
-                    <div className="haut">
+                        <div className="haut">
                           <div className="label_titre">Process</div>
-                          <h1 style={{marginBottom : 18}}> Objectifs spécfiques 2023 </h1>
+                          <h1>Objectifs spécfiques 2023</h1>
                         </div>
                         <div>
                           <Element icon={<CiBuilding style = {{ height : 36, width : 34, color : '#C22127'}} />}> 
@@ -25,11 +25,18 @@ export default function Objectifs() {
                           </Element>
                            
                         </div>
+                        <div className='bas'>
+                          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3sNWwXiGAMcfuz1i3YkKO8d-tNUNE5wKtKOejuE4HW2K7g/viewform?embedded=true">
+                          <button>
+                              Devenir une école bénéficiaire
+                          </button>
+                          </a>
+                        </div>
                         
                     </div>
-                    <div className ="col-12 col-md-6 col-lg-6 p-0">
+                    <div className ="col-12 col-md-6 col-lg-6 p-0 d-flex justify-content-center">
                         <div style={{width : '350px', height : 500, position : 'relative' }}>
-                            <Image src={"/assets/images/cameroon.svg"} layout = {'fill'} style ={{boxShadow : '-4px -4px 50px -20px orange'}} />
+                            <Image src={"/assets/images/cameroon.svg"} layout = {'fill'} />
                             <Point x = {44} y= {384} duree = {1} ville = "Douala" list={["Lycée Technique d'Akwa", "Lycée Technique de KOUMASSI"]} />
                             <Point x = {80} y= {300} duree = {1.2} ville = "Bafoussam" list={["Lycée Technique Canadien"]}/>
                             <Point x = {139} y= {365} duree = {1.4} ville = "Yaoundé" list={["Lycée Technique de NKOL BISSON"]}/>
