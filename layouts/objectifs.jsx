@@ -10,8 +10,8 @@ export default function Objectifs() {
                 <div className=" col-12 col-md-9 row p-0">
                     <div className="col-12 col-md-6 col-lg-6 p-0" >
                         <div className="haut">
-                          <div className="label_titre">Process</div>
-                          <h1>Objectifs spécfiques 2023</h1>
+                          <div className="label_titre" style={{textTransform : 'uppercase'}}>Phase pilote</div>
+                          <h1 style = {{ fontFamily : 'Comfortaa'}}>Objectifs spécfiques 2023</h1>
                         </div>
                         <div>
                           <Element icon={<CiBuilding style = {{ height : 36, width : 34, color : '#C22127'}} />}> 

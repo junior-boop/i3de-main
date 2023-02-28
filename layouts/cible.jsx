@@ -2,67 +2,45 @@ import Container from "../composants/container";
 
 export default function Cible(){
     return(
-        <section id="cible" className="mt-5">
-            <div className="titre color-white w-100 text-center py-5">
-                Notre cible
+        <section className='cible' style={{padding : '64px 0'}} >
+          <Container>
+            <div className="left">
+
+              <div className="cible_label">Notre cible</div>
+              <div className="cible_titre">Les avantages de l’impression 3D pour la professionnalisation</div>
+              <div className="desc">L’impression et la modélisation 3D permettent de créer des objets tangibles
+                  qui peuvent être manipulés et examinés, ce qui rend l'apprentissage plus interactif et
+                  plus intéressant. Les avantages d’ordre pédagogique sont multiples</div>
+              <div className="more">
+                <a href="/">
+                  <button>
+                      En savoir plus
+                  </button>
+                </a>
+              </div>
+
             </div>
-            <Container>
-                <div className="cible">
-                    <Calque image={'./assets/images/impression_3d_2.jpg'}>
-                       <div className="h3 w-100 mb-3">
-                        Pour les apprenants
-                       </div>
-                       <Paragraphe>
-                        Améliorer la professionnalisation des formations en contribuant à un apprentissage plus interactif, plus pratique, plus collaboratif, plus personnalisé et plus durable
-                       </Paragraphe>
-                       <Paragraphe>
-                        Fournir aux artisans et aux étudiants des outils et compétences en matière de conception et de fabrication pour créer des prototypes et des produits finis, personnalisés et même uniques.
-                       </Paragraphe>
-                    </Calque>
-                    <Calque inverse image={'./assets/images/formateur.jpg'}>
-                        <div className="h3 w-100 mb-3">
-                            Pour les enseignants / formateurs
-                        </div>
-                        <Paragraphe>
-                       Offrir aux enseignants / formateurs la possibilité de créer des outils pédagogiques, des modèles et des prototypes pour illustrer des concepts difficiles à comprendre ou des outils pédagogiques personnalisés qui peuvent aider les étudiants à apprendre plus efficacement. 
-                       </Paragraphe>
-                       <Paragraphe>
-                       Permettre aux enseignants de créer des objets pour des projets d'apprentissage : Les enseignants peuvent utiliser l'impression 3D pour créer des objets qui peuvent être utilisés dans des projets d'apprentissage. Cela permet aux étudiants de mieux comprendre les concepts et de les appliquer à des projets concrets et des expériences pratiques. 
-                       </Paragraphe>
-                    </Calque>
-                    <Calque image={'./assets/images/photo-17.jpg'}>
-                        <div className="h3 w-100 mb-3">
-                            Pour les artisans, les entreprises et industries
-                        </div>
-                        <Paragraphe>
-                       Booster l’entrepreneuriat, la flexibilité et la rentabilité des entreprises. Ceci est possible via 1- la réduction des coûts de fabrication et réduction des délais de production; 2- la création des produits personnalisés en fonction des besoins spécifiques de leurs clients.
-                       </Paragraphe>
-                       <Paragraphe>
-                       Booster l’innovation en permettant de créer des produits innovants et uniques (changeant en fonction des clients) qui peuvent être difficiles à réaliser avec des méthodes de fabrication traditionnelles. 
-                       </Paragraphe>
-                    </Calque>
-                </div>
-            </Container>
-        </section>
+            <div className="right">
+
+              <Element annee={'Pour les apprenants'} text = {"Booster la créativité des apprenants et améliorer la professionnalisation des enseignements en contribuant à un apprentissage plus interactif, plus pratique (via la manipulation réelle), plus collaboratif (via la cocréation), plus personnalisé et plus durable (les objets sont personnalisables et réutilisables)."} />
+              <Element annee={'Pour les enseignants'} text = {"Offrir aux enseignants / formateurs la possibilité de monter des projets d’apprentissage pratiques et de créer outils pédagogiques, des modèles et des prototypes pour illustrer des concepts difficiles à comprendre ou des outils pédagogiques personnalisés qui peuvent aider les étudiants à apprendre plus efficacement. "} />
+              <Element annee={"Pour les écoles"} text = {"Booster la créativité des apprenants et améliorer la professionnalisation des enseignements en contribuant à un apprentissage plus interactif, plus pratique (via la manipulation réelle), plus collaboratif (via la cocréation), plus personnalisé et plus durable (les objets sont personnalisables et réutilisables)."} />
+
+            </div>
+          </Container>
+      </section>
     )
 }
 
-function Calque({children, image, inverse}){
 
-    const checkInverse = inverse ? 'inverse' : '';
-
+function Element ({annee, text}){
     return(
-        <div className={`calque_cible ${checkInverse}`}>
-            <div className="cadre left" children = {children} />
-            <div className="cadre right" style={{backgroundImage : `url(${image})`}} />
+      <div className="ligne">
+        <div className="icon">
+          {annee}
         </div>
+        <div>{text}</div>
+      </div>
     )
-}
-
-function Paragraphe({children}){
-    return(
-        <p style={{fontSize : 18, fontWeight : '400', marginBottom : 12}}>
-            {children}
-        </p>
-    )
-}
+  }
+  

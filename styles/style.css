@@ -705,6 +705,7 @@ header p {
    color : black;
    font-size: 18px ;
    font-weight: 600;
+   text-align: justify;
 }
 #presentation .container > .secteur .desc .text + .text {
     margin-top: 12px;
@@ -2111,3 +2112,72 @@ background-color: #f1f1f1;
 }
 
 /* fin process */
+
+
+/* cible */
+.cible {
+    background-color: #f3f3f3;
+}
+.cible .container {
+    display: flex;
+    gap: 48px;
+}
+
+.cible .left, 
+.cible .right {
+    flex: 1;
+}
+
+.cible .left .cible_label {
+    padding: 7px 16px;
+    background-color: #c12227;
+    width: max-content;
+    color: white;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.cible .left .cible_titre {
+    font-size: 48px;
+    color: black;
+    padding: 16px 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: Comfortaa;
+}
+.cible .left .more button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #c12227;
+    background-image: var(--btn-color);
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 16px;
+}
+
+.cible .right .ligne {
+    display: flex;
+    align-items: flex-start;
+}
+.cible .right .ligne + .ligne {
+    margin-top: 36px;
+}
+.cible .right .ligne .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-size: 24px;
+    font-weight: 600;
+    border-right: 1px solid silver;
+    line-height: 1;
+
+    width: 200px;
+    height: 72px;
+}
+
+.cible .right .ligne div:last-child{
+    flex: 1;
+    padding-left: 16px ;
+}
+
+/* fin cible */
