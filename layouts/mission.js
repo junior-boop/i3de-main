@@ -4,7 +4,7 @@ export default function Mission(){
           <div className="container">
             <div className='secteur'>
               <div className="image">
-                <img src="" alt="" height={'100%'} />
+                <img src="/images_banniere.jpg" alt="" height={'100%'} />
               </div>
               <div className="cercle">
                    Édition

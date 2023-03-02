@@ -1,52 +1,44 @@
-import Image from "next/image";
 import Container from "../composants/container";
 
 export default function Testimony(){
     return (
-        <section id="testimony">
-            <Container>
-                <div className="h1 w-100 text-center py-5"> Ils en parlent </div>
-                <div className="row" style={{justifyContent : "center", gap : 12}}>
-                <Testy />
-                <Testy />
-                <Testy />
-                </div>
-            </Container>
-        </section>
+        <section className='testimony' style={{padding : '120px 0'}} >
+          <Container>
+            <div className="haut">
+              <div className="temoinage_label">TEMOIGNAGES</div>
+              <h1>Ils en parlent</h1>
+            </div>
+            <div className="bas">
+
+             <Temoin texte={"J’apprécie à sa juste valeur l’intérêt que vous accorder à la qualité de formation des Jeunes Camerounais"} auteur={"Dr NALOVA LYONGA"} image={'/assets/images/portrait.webp'} poste={"Ministre des Enseignements Secondaires"} />
+             <Temoin texte={"C’est une excellente initiative, pratique et claire qui démontre que l’importe du secteur privé pour soutenir l’écosystème de la formation "} auteur={"LUDOVIC SIGNARBIEUX"} image={'/assets/images/portrait.webp'} poste={"Global Partnership for Education"} />
+             <Temoin texte={"Je vous exprime ma grande satisfaction de vous voir contribuer aux cotés de PRICNAC à faire avancer la dynamique de la recherche et de l’innovation et de la Culture du numérique en Afrique Centrale. Nul doute que nos efforts conjugués nous permettront de mener cette grande ambition à produire des effets considérables pour la sous-région"} auteur={"Pr. Aissatou SY-WONYU"} image={'/assets/images/portrait.webp'} poste={"Directrice Régionale de l’AUF"} />
+             
+
+            </div>
+          </Container>
+      </section>
     )
 }
 
 
-function Testy(){
+function Temoin({texte, image, auteur, poste}){
     return(
-        <div className="testimony" >
-            <div className="m-auto mt-5 col-10 col-md-12 d-flex justify-content-center">
-                <ImageTesty />
-            </div>
-            <div className="m-auto col-10 col-md-10 d-flex justify-content-center p-0">
-                <div className="" style={{fontSize : 18, marginTop : 12, textAlign : "center"}}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nisi laborum, earum molestias amet maxime inventore repellat facere cum praesentium.
-                    
-                    <div style={{fontSize : 18, fontWeight : '600', marginTop : '12px'}}>
-                        Daniel Seppo Eke
-                    </div>
-                    <div>CEO of GenuisOfDigital</div>
-                </div>
-
-            </div>
+      <div className="temoin">
+        <div className="text">
+          "{texte}"
         </div>
-    )
-}
-
-function ImageTesty(){
-    return(
-        <div className="blockImage" style={{padding : '0 12px'}}>
-            <div className="image">
-                <div className="img" style={{backgroundImage : 'url(/assets/images/portrait.webp)', backgroundSize : 'cover', width : 100}}/>
-            </div>
-            
+        <div className="image">
+          <div className="img" style={{backgroundImage : `url(${image})`}}>
+  
+          </div>
         </div>
+        <div className="auteur">{auteur}</div>
+        <div className="poste">{poste}</div>
+  
+      </div>
     )
-}
+  }
+
 
 const quote = {display : "inline-block", fontSize : 36, fontWeight : 700, position : 'relative', height : 20}

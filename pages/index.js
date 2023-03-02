@@ -30,7 +30,7 @@ export default function Home() {
       {/* <Schema /> */}
       <Principal />
       <Services />
-      {/* <Testimony />  */}
+      <Testimony /> 
       {/* <Edition /> */}
       <Partenaire />
     </>
