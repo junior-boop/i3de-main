@@ -11,7 +11,7 @@ export default function Beneficiaire(){
                 <Container cName = {'row pb-5'} style = {{gap : 60, justifyContent : 'center'}}>
                     <Card_Beneficiate numerique={'05'} desc={`Les Établissements d'enseignement technique et Industriel du second cycle`} />
                     <Card_Beneficiate numerique={'55'} desc={`Les enseignants desdits établissements techniques`}  />
-                    <Card_Beneficiate numerique={`+6K`} desc={`Les éleves des établissements ciblé`} />
+                    <Card_Beneficiate numerique={`+6K`} desc={`Les éleves des établissements ciblés`} />
                     <Card_Beneficiate numerique={'04'} desc={`Régions et les communautés éducatives régionales`} />
                 </Container>
                 
