@@ -1,3 +1,5 @@
+import { BiFacebook, BiLinkedin, BiYoutube } from "../composants/icons"
+
 export default function Footer(){
     return (
         <>
@@ -6,68 +8,59 @@ export default function Footer(){
                 <div className="row">
                     <div className="col-md-4">
                         <h5>
-                            Technique d'impression 3D
+                            A Propos de nous
                         </h5>
                         <ul>
-                            <li>
-                                Fused deposition modeling (FDM)
-                            </li>
-                            <li>
-                                Stereolithography Apparatus (SLA)
-                            </li>
-                            <li>
-                                Continuous Liquid Interface Production (CLIP)
-                            </li>
-                            <li>
-                                Frittage Sélective Laser Sintering (SLS)
-                            </li>
-                            <li>
-                            Selective Laser Melting (SLM)
-                            </li>
+                            <div>
+                            I3DE est une initiative (CAYSTI & MANLAB) qui a pour vocation de créer une industrie locale qui renforce le capital humain et facilite l’accès à des outils (technologies et méthodes) innovants basés sur l’impression 3D au service des secteurs économiques de croissance et de l’éducation en particulier.
+                            </div>
                         </ul>
                     </div>
                     <div className="col-md-4">
                         <h5>
-                            Autres domaines d'application dans l'I3DE
+                            Entrer en contact
                         </h5>
                         <ul>
                             <li>
-                                L'Aéronautique
+                                BP 7283, Yaoundé
                             </li>
-                            <li>
-                                La Construction
-                            </li>
-                            <li>
-                                L'industrie automobile
-                            </li>
-                            <li>
-                                La mode
-                            </li>
-                            <li>
-                                La nourriture
-                            </li>
-                            <li>
-                            Les Études scientifiques
-                            </li>
+                            <div style = {{ padding : '14px 0'}}>
+                                <li>
+                                    i3de@caysti.com 
+                                </li>
+                                <li>contact@i3deducation.com</li>
+                            </div>
+                            
+                                <li>
+                                    +237 696752150
+                                </li>
+                                
+                            
                         </ul>
                     </div>
                     <div className="col-md-4">
                         <h5>
-                        Matériaux pour I3DE
+                            Restez informer
                         </h5>
                         <ul>
                             <li>
-                                Les plastiques
+                                Inscrivez-vous aujourd'hui pour obtenir des informations et les dernières nouvelles sur les produits
                             </li>
                             <li>
-                                Les métaux
+                                <NewsLetter />
                             </li>
-                            <li>
-                                La céramique
+                            <li style = {{ display: 'flex', gap : 14 }}>
+                                <div className="sociaux">
+                                    <BiFacebook style = {{ width : 24, height : 24 }} />
+                                </div>
+                                <div className="sociaux">
+                                    <BiYoutube style = {{ width : 24, height : 24 }}/>
+                                </div>
+                                <div className="sociaux">
+                                    <BiLinkedin style = {{ width : 24, height : 24 }}/>
+                                </div>
                             </li>
-                            <li>
-                                Tissu humain (ou cuire de vache)
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -76,9 +69,20 @@ export default function Footer(){
 
             <section className="footer_section bg-special">
                 <p className="color-white px-3">
-                    Copyright &copy; 2022 All Rights Reserved By <a className="color-white" href="https://html.design/">CAYSTI Corp</a>
+                    Copyright &copy; 2022 All Rights Reserved By <a className="color-white" href="https://html.design/">CAYSTI Corp & MANLAB</a>
                 </p>
             </section>
         </>
     )
 }
+
+
+function NewsLetter(){
+    return (
+        <div className="newsletter">
+            <input type="text" />
+            <button> Send </button>
+        </div>
+    )
+}
+
