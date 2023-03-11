@@ -2034,10 +2034,20 @@ background-color: #f1f1f1;
     margin: 0 23px;
 }
 
+#partenaire .carousel {
+    margin : '0 auto';
+    width: "80%";
+    justify-content: "space-between";
+    user-select: "none";
+}
+
 @media (max-width : 756px) {
     #partenaire .items {
         height: 116px;
         min-width: 60px;
+    }
+    #partenaire .carousel {
+        width: "100%";
     }
 }
 

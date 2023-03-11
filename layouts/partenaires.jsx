@@ -24,13 +24,7 @@ export default function Partenaire(){
                         <div className="partenaire row justify-content-center">
                         <Carousel
                         containerProps={{
-                            style: {
-                                margin : '0 auto',
-                                width: "80%",
-                                justifyContent: "space-between",
-                                userSelect: "none",
-                                gap : 30
-                            }
+                            className : 'carousel',
                         }}
                         autoplay
                         delay = {500}
