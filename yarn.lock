@@ -1120,6 +1120,11 @@ core-js-pure@^3.25.1:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.26.0.tgz#7ad8a5dd7d910756f3124374b50026e23265ca9a"
   integrity sha512-LiN6fylpVBVwT8twhhluD9TzXmZQQsr2I2eIKtWNbZI1XMfBT7CV18itaN6RA7EtQd/SDdRx/wzvAShX2HvhQA==
 
+core-js@^3.8.1:
+  version "3.29.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.29.0.tgz#0273e142b67761058bcde5615c503c7406b572d6"
+  integrity sha512-VG23vuEisJNkGl6XQmFJd3rEG/so/CNatqeE+7uZAwTSwFeB/qaO0be8xZYUNWprJ/GIwL8aMt9cj1kvbpTZhg==
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
@@ -2839,6 +2844,13 @@ react-scroll-motion@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-scroll-motion/-/react-scroll-motion-0.3.0.tgz#50b473da71521e12fcc39a4a1c7eb1e4dfed2a44"
   integrity sha512-/7VUbyu0nONmlyQsnivcAOPCdc6GnS6LFL7R3QygtBjVAmA7dD29B/jje3jNa0fLlrwycriXq/Nm9sWgX7A1Bw==
+
+react-simply-carousel@^8.5.4:
+  version "8.5.4"
+  resolved "https://registry.yarnpkg.com/react-simply-carousel/-/react-simply-carousel-8.5.4.tgz#188f0f2864d740d8d42398fe97d5e876be5b6736"
+  integrity sha512-1ryPqIjE6AoTifpxu9gnlJNrcPczl9Ec7X4GB40AeT/RPCz6ExDGt5qSKMUI6mYkdZCUivwqdS8Kkoo050903g==
+  dependencies:
+    core-js "^3.8.1"
 
 react@18.1.0:
   version "18.1.0"

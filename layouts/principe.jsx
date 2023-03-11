@@ -6,6 +6,7 @@ import Style from '../styles/style-e.module.css'
 export default function Principal(){
     return(
         <>
+        <Container>
         <div className="vide"></div>
         <div className="vide"></div>
         
@@ -47,6 +48,7 @@ export default function Principal(){
                 texte = {"Les objets produits lors des impressions ont une durée de vie moyenne de cinq (05) ans. Ce qui évite l'utilisation superflue de filaments pour la réimpression des kits chaque année."}
             />
         </section>
+        </Container>
         </>
     )
 } 

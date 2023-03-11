@@ -17,6 +17,7 @@
     "react-dom": "18.1.0",
     "react-firebase-hooks": "^5.0.3",
     "react-scroll-motion": "^0.3.0",
+    "react-simply-carousel": "^8.5.4",
     "yarn": "^1.22.18"
   },
   "devDependencies": {

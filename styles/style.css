@@ -2030,7 +2030,8 @@ background-color: #f1f1f1;
     justify-content: center;
     width: auto;
     height: 150px;
-    min-width: 150px;
+    min-width: 100px;
+    margin: 0 23px;
 }
 
 @media (max-width : 756px) {
