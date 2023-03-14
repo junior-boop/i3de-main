@@ -33,8 +33,8 @@ export default function NavBar(){
         if(typeof window !== 'undefined'){
             if(window.location.pathname !== '/dons'){
                 return (
-                    <Link  href={'/dons'}>
-                        <button>Faire un don</button>
+                    <Link  href={'/inscription'}>
+                        <button>S'inscrire</button>
                     </Link>
                 )
             } else {

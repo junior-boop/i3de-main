@@ -1774,6 +1774,7 @@ img, svg {
     gap: 24px;
     margin: 0 auto;
     flex-wrap: wrap;
+    padding: 64px 0;
 }
 /* .inscription_section * {
     font-size: 16px;
@@ -1791,9 +1792,11 @@ img, svg {
 }
 
 .inscription_section .cadre.desc {
-    background-color: #f1f1f1;
+    background-color: #f3f3f3;
     position: relative;
-    height: 500px;
+    height: 600px;
+    border-radius: 18px;
+    overflow: hidden;
 }
 
 .inscription_section .cadre.desc > .footer, 
@@ -1805,7 +1808,7 @@ img, svg {
 }
 
 .inscription_section .cadre.desc > .footer {
-    font-size: x-large;
+    font-size: large;
     border: none;
     outline: 1px solid transparent;
     background-color: #c12227;
@@ -1821,20 +1824,24 @@ img, svg {
 .inscription_section .cadre.desc > .header{
     color: #c12227;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 36px;
     font-family: Montserrat ;
     font-size: 24px;
     font-weight: 700;
+    height: 96px;
 }
 
 .inscription_section .cadre.desc > .content {
-    padding: 0 24px;
+    padding: 0 36px;
 }
 .inscription_section .cadre.desc > .content  li+li {
     margin-top: 12px;
 }
 .inscription_section .cadre.desc > .content * {
     font-size: 16px;
+}
+.inscription_section .cadre.desc > .content ul {
+    padding-left: 1rem;
 }
 .col{
     color: #992a36;
@@ -2314,11 +2321,12 @@ background-color: #f1f1f1;
    outline: transparent;
 }
 .newsletter button {
-    width: 20%;
+    width: 25%;
     background-image: var(--btn-color);
     color: white;
     border: none;
    outline: transparent;
+   font-weight: 600;
 }
 .sociaux {
     width : 42px ;
@@ -2327,4 +2335,129 @@ background-color: #f1f1f1;
     align-items: center;
     justify-content: center;
     border: 1px solid silver;
+}
+
+/* ressource */
+
+#ressource .ressource {
+    display: flex;
+}
+#ressource .ressource .option {
+    width: 350px;   
+    padding-right: 24px;
+}
+#ressource .ressource .column {
+    flex: 1;
+    column-count: 3;
+    column-gap: 1rem
+}
+
+.ImageItem {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+
+.ImageItem:hover {
+    transform: scale(.99);
+}
+
+.ImageItem .descrition {
+    min-height: 42px;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 1rem ;
+    gap:12px
+}
+.ImageItem .descrition .title {
+    flex: 1;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+
+}
+.ImageItem .descrition .icon {
+    width : 42px ;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+#ressource .ressource .little_menu {
+    display: flex;
+    align-items: center;
+    padding: 12px 1rem;
+    gap: 12px;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    width : 100% ;
+    transform : translateY(100%);
+    opacity: 0;
+    transition : all .2s ease-in-out
+}
+
+#ressource .ressource .ImageItem:hover .little_menu{
+    opacity: 1;
+    transform : translateY(0);
+}
+
+#ressource .ressource .little_menu .action {
+    width: 36px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.513);
+    box-shadow: 0 0 10px -10px rgba(0, 0, 0, 0.401);
+    transition: all .3s ease-in-out;
+}
+#ressource .ressource .little_menu .action:hover {
+    background-color: rgba(255, 255, 255, 0.763);
+    box-shadow: 0 0 10px -10px rgba(0, 0, 0, 0.671);
+}
+
+#ressource .ressource .option .inputBase {
+    display: flex;
+    align-items: center;
+    gap : 12px;
+    background-color: #f3f3f3;
+    border-radius: 24px;
+    margin-top: 14px;
+    margin-bottom: 36px;
+    padding: 0 3px ;
+    height: 46px;
+}
+
+#ressource .ressource .option .inputBase input {
+    border: none;
+    padding: 12px;
+    outline: none;
+    background-color: transparent;
+    flex: 1;
+    height: 44px;
+} 
+#ressource .ressource .option .inputBase .icon {
+    height: 85%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: var(--btn-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+#ressource .ressource .option .listeElement {
+    padding: 7px 0;
+    font-size: 16px;
+    font-weight: 600;
 }

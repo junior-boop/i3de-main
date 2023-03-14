@@ -29,7 +29,7 @@ export default function Inscription(){
                     </button>
                 </div>
                 <div className="cadre desc">
-                <div className="header">Etablissement Scolaire</div>
+                <div className="header">Etablissement bénéficiaire</div>
                     <div className="content">
                         <div>
                             <ul>
@@ -44,7 +44,7 @@ export default function Inscription(){
                         
                     </div>
                     <button className="footer">
-                        Contactez-nous
+                        Devenir une école bénéficiaire
                     </button>
                 </div>
             </div>

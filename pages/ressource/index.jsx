@@ -1,8 +1,9 @@
 import Container from "../../composants/container";
 import Bannier from "../../layouts/bannier";
-import Titre from '../../composants/titre'
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { BxsLike, MaterialSymbolsCloudDownloadRounded, MdiShare, RiSearchLine } from "../../composants/icons";
+import { useRouter } from "next/router";
 
 
 export const data = [
@@ -53,15 +54,24 @@ export default function Ressource(){
         <>
             <div className="vide"></div>
             <Bannier name={'Ressources'} />
-            <section style={{ padding : '7rem 0'}}>
+            <section id = 'ressource' style={{ padding : '6rem 0'}}>
             <Container>
-                <Titre titre={'Nouvelles Images'} />
-                <div className="row nouveau">
-                    {data.map(({id, url}) => <ImageItem key={id} image={url} id={id} onClick = {() => handleCurrentImage(id)} />)}
-                </div>
-                <div className="gallerie">
-                <Titre titre={'Galerie'} />
-                <Gallerie data={data} id = {1} />
+                <div className="ressource">
+                    <div className="option">
+                        <h3> Recherche </h3>
+                        <InputSearch placeholder={'Rechercher un article'} />
+                        <h5 style = {{marginBottom : 12}}>Filtre</h5>
+                        <div>
+                            <ListElement titre = 'Tous les éléments' />
+                            <ListElement titre = 'Fiches pédagogique'/>
+                            <ListElement titre = 'Modèles 3D' />
+                            <ListElement titre = 'Quelques exemples' />
+                        </div>
+                    </div>
+                    <div className="column">
+                        {data.map(({id, url}) => <ImageItem key={id} image={url} id={id} onClick = {() => handleCurrentImage(id)} />)}
+                    </div>
+                
                 </div>
             </Container>
             </section>
@@ -75,20 +85,55 @@ export default function Ressource(){
 export function ImageItem({image, onClick, id}){
     
     return(
-        <div className="col-6 col-md-3 d-flex mb-4 justify-content-center" onClick={onClick}>
-            <div className="col-12 p-0" style={{backgroundImage : `url(${image})`, backgroundPosition : 'center', backgroundSize : 'cover', aspectRatio : 1, backgroundColor : "silver", borderRadius : 12, cursor : 'pointer'}}>
-                {id === 8 ? <div className="h2" style={{width : '100%', height : '100%', backgroundColor : '#fff9', borderRadius : 12, display : "flex", alignItems : 'center', justifyContent : 'center'}}>+ {data.length - 6 <= 10 ? `0${data.length - 6}` : data.length - 6}</div> : null}    
-            </div>   
+        <div className="ImageItem" onClick={onClick}>
+            <div className="col-12 p-0 image" style={{ cursor : 'pointer', position : 'relative', overflow : 'hidden'}}>
+                <img src={image} width = '100%' />  
+                <div className="little_menu">
+                    <Button icon={<BxsLike style = {{ width : 20, hieght : 20}} />} />
+                    <Button icon={<MaterialSymbolsCloudDownloadRounded style = {{ width : 20, hieght : 20}} />}/>
+                </div> 
+            </div> 
+            <div className="descrition">
+                <div className="title">
+                    Le titre de la realisation
+                </div>
+                <div className="icon">
+                    <MdiShare style = {{ width : 24, hieght : 24}} />
+                </div>
+            </div>  
         </div>
     )
 }
-// function ImageGallerie({image}){
-//     return(
-//         <div className="col-6 col-md-3 d-flex mb-4 justify-content-center">
-//             <div className="col-12" style={{backgroundImage : `url(${image})`, backgroundPosition : 'center', backgroundSize : 'cover', aspectRatio : 1, backgroundColor : "silver", borderRadius : 12}}></div>   
-//         </div>
-//     )
-// }
+
+function Button({onClick, icon}){
+    return(
+        <div className="action" onClick={onClick}>
+            {icon}
+        </div>
+    )
+}
+
+function ListElement({titre}){
+    const route = useRouter()
+
+    console.log(route)
+    return(
+        <div className="listeElement">
+           {titre}
+        </div>
+    )
+} 
+
+function InputSearch({ value, onChange, placeholder}){
+    return(
+        <div className="inputBase">
+            <input type="text" value={value} onChange={onChange} placeholder={placeholder} />
+            <div className="icon">
+                <RiSearchLine style = {{ width : 20, hieght : 20, color : 'white'}}/>
+            </div>
+        </div>
+    )
+}
 
 export function Viewer({onClick, open, data, imageId }){
     // Etat
@@ -164,44 +209,4 @@ export function Viewer({onClick, open, data, imageId }){
     )
 }
 
-function Gallerie({data, id}){
 
-    const imageLength = () => data.length <= 10 ? '00' : data.length
-
-    return (
-        <a href={`/ressource/${id}`} onClick = {() => console.log('je fonctionne')}>
-            <div className="gallerie row">
-                <div className="images col-12 col-md-5">
-                    <ImageGallerie />
-                </div>
-                <div className="desc col-12 col-md-7 pt-4 pl-md-4">
-                    <p style={{opacity : 0.6}}>La periode de publication</p>
-                    {/* <h3>Le titre de l'album</h3>
-                    <h4>nombre total d'image  : </h4> */}
-                </div>
-                
-            </div>
-        </a>
-    )
-}
-
-
-function ImageGallerie() {
-    const images = (data) => {
-        let Arr = []
-        for(let i = 0 ; i < 6; i++){
-             let div = <div style={{height : 166, width : 200 / (i+1), backgroundColor : 'silver', backgroundImage : `url(${data[i].url})`, backgroundRepeat : 'no-repeat', backgroundPosition : 'center', backgroundSize : 'cover'}}/>
-             Arr.push(div)
-        }
-
-        return Arr
-    }
-    return(
-        <div className="d-flex" style={{ position: 'relative',overflow : 'hidden', borderRadius : 16, width : '100%'}}>
-            {images(data)}
-            <div style={{position : "absolute", top : 0, right : 0, width : 100, height : '100%', backgroundImage : 'linear-gradient(90deg, transparent 0%, white 80%)', display : "flex", alignItems : "center", justifyContent : 'flex-end', paddingRight : 10}}>
-                <div className="h2" style={{color : 'silver'}}>+ {data.length - 6 <= 10 ? `0${data.length - 6}` : data.length - 6}</div>
-            </div>
-        </div>
-    )
-}

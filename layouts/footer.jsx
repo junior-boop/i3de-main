@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { BiFacebook, BiLinkedin, BiYoutube } from "../composants/icons"
 
 export default function Footer(){
@@ -50,15 +51,10 @@ export default function Footer(){
                                 <NewsLetter />
                             </li>
                             <li style = {{ display: 'flex', gap : 14 }}>
-                                <div className="sociaux">
-                                    <BiFacebook style = {{ width : 24, height : 24 }} />
-                                </div>
-                                <div className="sociaux">
-                                    <BiYoutube style = {{ width : 24, height : 24 }}/>
-                                </div>
-                                <div className="sociaux">
-                                    <BiLinkedin style = {{ width : 24, height : 24 }}/>
-                                </div>
+                                <BtnSociaux icon={<BiFacebook style = {{ width : 24, height : 24 }} />} url = 'facebook.com' />
+                                <BtnSociaux icon={<BiYoutube style = {{ width : 24, height : 24 }}/>} url = 'facebook.com' />
+                                <BtnSociaux icon={<BiLinkedin style = {{ width : 24, height : 24 }}/>} url = 'facebook.com' />
+                                
                             </li>
                             
                         </ul>
@@ -80,9 +76,18 @@ export default function Footer(){
 function NewsLetter(){
     return (
         <div className="newsletter">
-            <input type="text" />
-            <button> Send </button>
+            <input type="email" />
+            <button> Envoyer </button>
         </div>
     )
 }
 
+function BtnSociaux({url = '/', icon}) {
+    return(
+       <Link href={url}>
+            <div className="sociaux" style={{ cursor : 'pointer'}}>
+                {icon}
+            </div>
+       </Link>
+    )
+}
