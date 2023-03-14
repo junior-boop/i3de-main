@@ -66,26 +66,24 @@ export default function NavBar(){
                         <Image src = {'/icon_burgeur.svg'} width= {28} height = {28}  onClick = {handleVisibility} />
                     </motion.div>
                 </div>
-                <motion.div className="nav-overlay"
+                <div className="nav-overlay"
                     data-visible = {visible}
                     
                 >
                     <div style={{ display : "flex", width : 'auto'}}>
-                    <motion.div className="cover" onClick={handleVisibility} layout = {'size'} transition = {{ type : 'spring', stiffness : 700, damping : 70}} ></motion.div>
-                    <motion.div className="nav-content"
+                    <div className="cover" onClick={handleVisibility} layout = {'size'} transition = {{ type : 'spring', stiffness : 700, damping : 70}} ></div>
+                    <div className="nav-content"
                         data-visible = {visible} 
                     >
                         <div className="vide">
                             <div className="close_btn close">
-                                <motion.div className=" icone"
-                                     whileTap={{scale : 0.9}}
-                                     transition = {{ type : 'spring', stiffness : 200, damping : 6 }}
+                                <div className=" icone"
                                      onClick = {handleVisibility}
                                 >
                                     <div>
                                         <Image src="/assets/icon/icon_close.png" width= {28} height = {28} alt="" />
                                     </div>
-                                </motion.div>
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -112,9 +110,9 @@ export default function NavBar(){
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
                     </div>
-                </motion.div>
+                    </div>
+                </div>
             </Container>
         </div>
     </nav>

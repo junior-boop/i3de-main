@@ -1282,6 +1282,12 @@ header p {
     width: 70vw;
 }
 
+@media (max-width : 756px) {
+    .nav-overlay[data-visible = 'true'] .cover {
+        width: 20vw;
+        flex: 1;
+    }
+}
 .nav-overlay .nav-content .vide {
     display: flex;
     align-items: center;
