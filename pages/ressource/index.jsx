@@ -54,7 +54,7 @@ export default function Ressource(){
         <>
             <div className="vide"></div>
             <Bannier name={'Ressources'} />
-            <section id = 'ressource' style={{ padding : '6rem 0'}}>
+            <section id = 'ressource'>
             <Container>
                 <div className="ressource">
                     <div className="option">
