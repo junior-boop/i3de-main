@@ -1,5 +1,4 @@
 import Container from "../composants/container";
-import Image from 'next/image'
 import Style from '../styles/style-e.module.css'
 
 
@@ -10,7 +9,7 @@ export default function Principal(){
         <div className="vide"></div>
         <div className="vide"></div>
         
-        <div className="titre w-100 text-center py-4"> Bénéficiaires </div>
+        <div className="titre w-100 text-center py-4"> Les 04 Piliers </div>
         
         <section className={Style.container} style={{display : 'flex', alignItem : 'center', gap : 16, flexWrap : 'wrap', paddingTop : '64px', paddingBottom : 64}}>
             <Element className={'rand-4 rand-4-phone'} 

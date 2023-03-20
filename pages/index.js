@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Container from '../composants/container'
 import Beneficiaire from '../layouts/beneficaire'
-import Schema from '../layouts/etapes'
 import Header from '../layouts/header'
 import Mission from '../layouts/mission'
 import Objectifs from '../layouts/objectifs'
@@ -10,12 +8,13 @@ import Testimony from '../layouts/temoignage'
 
 import Cible from '../layouts/cible'
 import Services from '../layouts/services'
-import Edition from '../layouts/edition'
 import Partenaire from '../layouts/partenaires'
 
 
 
 export default function Home() {
+
+  
   return (
     <>
       <Head>
@@ -27,11 +26,9 @@ export default function Home() {
       <Beneficiaire />
       <Objectifs />
       <Cible />
-      {/* <Schema /> */}
       <Principal />
       <Services />
       <Testimony /> 
-      {/* <Edition /> */}
       <Partenaire />
     </>
   )

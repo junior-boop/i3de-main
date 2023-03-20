@@ -1,8 +1,8 @@
 import Container from "../../composants/container";
-import Bannier from "../../layouts/bannier";
+import Bannier, { Bannier_second } from "../../layouts/bannier";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { BxsLike, MaterialSymbolsCloudDownloadRounded, MdiShare, RiSearchLine } from "../../composants/icons";
+import { BxsLike, CiNotification, IcOutlineAdd, MaterialSymbolsCloudDownloadRounded, MdiShare, RiSearchLine } from "../../composants/icons";
 import { useRouter } from "next/router";
 
 
@@ -44,6 +44,7 @@ export const data = [
 export default function Ressource(){
     const [open, setOpen] = useState(false)
     const [currentImage, setCurrentImage] = useState(1)
+    const [openNotification, setOpenNotification] = useState(false)
 
     const handleCurrentImage = (id) => {
         setOpen(!open)
@@ -53,7 +54,20 @@ export default function Ressource(){
     return(
         <>
             <div className="vide"></div>
-            <Bannier name={'Ressources'} />
+            <Bannier_second name={'Ressources'} style={{display : 'flex', alignItems : 'center'}}>
+                <div className="outils_creation_ressource">
+                    <button className="icon">
+                        <IcOutlineAdd style = {{ width : 24, height : 24 }} />
+                    </button>
+                    <button className="icon" onClick={() => setOpenNotification(!openNotification)}>
+                        <CiNotification style = {{ width : 24, height : 24 }}/>
+                        <div className="pince">
+                            0
+                        </div>
+                    </button>
+                    <NotificationView open={openNotification} />
+                </div>
+            </Bannier_second>
             <section id = 'ressource'>
             <Container>
                 <div className="ressource">
@@ -67,6 +81,17 @@ export default function Ressource(){
                             <ListElement titre = 'Modèles 3D' />
                             <ListElement titre = 'Quelques exemples' />
                         </div>
+
+                        <div className="user">
+                        <h5 style = {{marginBottom : 12}}>Mon Compte</h5>
+                            <div>
+                                <ListElement titre = 'Actions' />
+                                <ListElement titre = 'Préferences'/>
+                                <ListElement titre = 'Réalisations' />
+                            </div>
+
+                        </div>
+
                     </div>
                     <div className="column">
                         {data.map(({id, url}) => <ImageItem key={id} image={url} id={id} onClick = {() => handleCurrentImage(id)} />)}
@@ -75,7 +100,7 @@ export default function Ressource(){
                 </div>
             </Container>
             </section>
-            <Viewer data={data} imageId = {currentImage} open = {open} onClick = {() => setOpen(!open)} />
+            
         </>
     )
 }
@@ -114,9 +139,7 @@ function Button({onClick, icon}){
 }
 
 function ListElement({titre}){
-    const route = useRouter()
-
-    console.log(route)
+  
     return(
         <div className="listeElement">
            {titre}
@@ -135,76 +158,17 @@ function InputSearch({ value, onChange, placeholder}){
     )
 }
 
-export function Viewer({onClick, open, data, imageId }){
-    // Etat
-    const [currentImage, setCurrentImage] = useState('')
-    const [currentPosition, setCurrentPosition] = useState(imageId) 
-    
-
-    useEffect(() => {
-        data.forEach(({id, url}) => {
-            if(id === imageId){
-                setCurrentImage(url)
-                setCurrentPosition(id)
-            }
-       })
-    }, [imageId])
-
-    useEffect(() => {
-        data.forEach(({id, url}) => {
-            if(id === currentPosition){
-                setCurrentImage(url)
-            }
-       })
-    }, [currentPosition])
-
-    // Comportement
-    const SetCurrentPosition = (idi) =>{
-        data.forEach(({id, url}) => {
-            if(id === idi){
-                setCurrentImage(url)
-                setCurrentPosition(id)
-            }
-       })
-    }
-    
-
-    const leftHandleBtn = () => {
-        if(currentPosition <= 1 ){
-            setCurrentPosition(data.length)
-        } else {
-            setCurrentPosition(currentPosition - 1)
-        }
-    }
-
-    console.log(currentPosition, data.length)
-    const rightHandleBtn = () => {
-        if(currentPosition > data.length-1){
-            setCurrentPosition(1)
-        } else {
-            setCurrentPosition(currentPosition + 1)
-        }
-    }
-    
-    const Image = data.map(({id, url}) => <div key={id} className="thumbail" style={{ backgroundImage : `url(${url})`, border : id === currentPosition ? '3px solid red': 'none'}} onClick = {() => SetCurrentPosition(id)}/>)
-    
+export function NotificationView({open}){
     return(
-        <div className="viewer justify-content-center"  style = {{ display : open ? 'flex' : 'none'}}>
-                <div style={{position : 'absolute', top : 0, left : 0, width : "100%", height : '100vh',zIndex : 1005}} onClick = {onClick}  />
-                <div className="screen" style={{zIndex : 1010}}>
-                    <div className="viewerImage">
-                        <img src={currentImage} height = {'100%'} alt="" />
-                        <div className="leftbtn">
-                            <img src="/assets/icon/icon_left.png" width={"100%"} alt="left arrow icon" onClick={() => leftHandleBtn()} />
-                        </div>
-                        <div className="rightbtn">
-                            <img src="/assets/icon/icon_right.png" width={"100%"} alt="right arrow icon" onClick={() => rightHandleBtn()} />
-                        </div>
-                    </div>
-                    <div className="controller">
-                        {Image}
-                    </div>
+        <div className="notificationView" data-open = {open}>
+            <div className="notificationHeader">
+                <span>Les Notifications</span>
+            </div>
+            <div className="notificationContent">
+                <div className="contentVide">
+                    <span>Notification vide</span>
                 </div>
+            </div>
         </div>
     )
 }

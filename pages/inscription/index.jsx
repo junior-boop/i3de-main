@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "../../composants/container";
 import Bannier from "../../layouts/bannier";
 
@@ -24,9 +25,11 @@ export default function Inscription(){
                             <li>Le lorem ipsum est, en  utilisée à titre </li>
                         </ul>
                     </div>
-                    <button className="footer">
-                        Inscrivez-vous
-                    </button>
+                    <Link href={'/login'}>
+                        <button className="footer">
+                            Inscrivez-vous
+                        </button>
+                    </Link>
                 </div>
                 <div className="cadre desc">
                 <div className="header">Etablissement bénéficiaire</div>
@@ -43,9 +46,11 @@ export default function Inscription(){
                         </div>
                         
                     </div>
+                    <Link href={'/login'}>
                     <button className="footer">
                         Devenir une école bénéficiaire
                     </button>
+                    </Link>
                 </div>
             </div>
 

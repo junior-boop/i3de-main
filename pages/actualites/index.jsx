@@ -12,6 +12,7 @@ export default function Actualite (){
             <Head>
                 <title>Actualite | I3DE </title>
             </Head>
+            <div className="vide"></div>
             <Bannier name={"Actualités"} />
             <div className={Style.container}>
             <Titre titre={'Recents'} />
