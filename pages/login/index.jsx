@@ -25,7 +25,7 @@ export default function Login(){
                 <div className="login">
                         <div style={{ marginBottom : 24, }}>
                             <h1 style={{ textAlign : 'center'}}>
-                                S'inscrire 
+                                S{"'"}inscrire 
                             </h1>
                             <h3> en tant que particulier</h3>
                         </div>
