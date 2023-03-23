@@ -7,14 +7,13 @@ import { getAuth } from 'firebase/auth'
 import { useState, useEffect } from "react";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDCdoEOYomlTZANgV90x42hcIpi0WxIHuA",
-  authDomain: "leadb-aee74.firebaseapp.com",
-  databaseURL: "https://leadb-aee74-default-rtdb.firebaseio.com",
-  projectId: "leadb-aee74",
-  storageBucket: "leadb-aee74.appspot.com",
-  messagingSenderId: "342738697323",
-  appId: "1:342738697323:web:716f692d7cebb41ed9452e",
-  measurementId: "G-HEBFZL2W7V"
+  apiKey: "AIzaSyA6LiSvoOSUSp6kKyu6nNYHLAJABN7W0BI",
+  authDomain: "i3de-project.firebaseapp.com",
+  projectId: "i3de-project",
+  storageBucket: "i3de-project.appspot.com",
+  messagingSenderId: "84252203249",
+  appId: "1:84252203249:web:09b333a1eb28f564bab150",
+  measurementId: "G-BKM4FVSZZN"
 };
 
 

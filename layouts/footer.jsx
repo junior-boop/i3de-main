@@ -41,7 +41,7 @@ export default function Footer(){
                     </div>
                     <div className="col-md-4">
                         <h5>
-                            Restez informer
+                            Restez informé
                         </h5>
                         <ul>
                             <li>

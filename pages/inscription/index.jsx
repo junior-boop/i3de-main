@@ -9,7 +9,6 @@ export default function Inscription(){
         <Bannier name={'Inscription'} />
         <Container>
             <div className="vide"></div>
-            
             <div className="inscription_section">
                 <div className="cadre">
                     <div className="titre">Bénéficiez du programme</div>

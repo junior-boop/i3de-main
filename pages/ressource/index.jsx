@@ -1,9 +1,11 @@
 import Container from "../../composants/container";
-import Bannier, { Bannier_second } from "../../layouts/bannier";
-import { useEffect, useState } from "react";
+import { Bannier_second } from "../../layouts/bannier";
+import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
+import Global_context from "../../context/global_context";
 import { BxsLike, CiNotification, IcOutlineAdd, MaterialSymbolsCloudDownloadRounded, MdiShare, RiSearchLine } from "../../composants/icons";
 import { useRouter } from "next/router";
+import { collection, ref,  getDocs } from 'firebase/firestore'
 
 
 export const data = [
@@ -45,20 +47,41 @@ export default function Ressource(){
     const [open, setOpen] = useState(false)
     const [currentImage, setCurrentImage] = useState(1)
     const [openNotification, setOpenNotification] = useState(false)
+    const [dataRessource, setDataRessource] = useState([])
+
+    const { Database } = useContext(Global_context)
 
     const handleCurrentImage = (id) => {
         setOpen(!open)
         setCurrentImage(id)
     }
+
+    useEffect(() => {
+        if(Database !== null) {
+            console.log('je fonctionne')
+            const databaseRef = collection(Database, 'realisations/')
+            
+            const getInfos = async () => {
+                const docSnap = await getDocs(databaseRef)
+                docSnap.docs.forEach(el => {
+                    setDataRessource(Element => [...Element, {data : el.data(), id : el.id} ])
+                })
+            }
+
+            getInfos()
+        }
+    }, [Database])
     
     return(
         <>
             <div className="vide"></div>
             <Bannier_second name={'Ressources'} style={{display : 'flex', alignItems : 'center'}}>
                 <div className="outils_creation_ressource">
-                    <button className="icon">
-                        <IcOutlineAdd style = {{ width : 24, height : 24 }} />
-                    </button>
+                    <Link href={'/ressource/new'}>
+                        <button className="icon">
+                            <IcOutlineAdd style = {{ width : 24, height : 24 }} />
+                        </button>
+                    </Link>
                     <button className="icon" onClick={() => setOpenNotification(!openNotification)}>
                         <CiNotification style = {{ width : 24, height : 24 }}/>
                         <div className="pince">
@@ -94,7 +117,7 @@ export default function Ressource(){
 
                     </div>
                     <div className="column">
-                        {data.map(({id, url}) => <ImageItem key={id} image={url} id={id} onClick = {() => handleCurrentImage(id)} />)}
+                        {dataRessource.map(({id, data}) => <ImageItem key={id} data = {data} id={id} onClick = {() => handleCurrentImage(id)} />)}
                     </div>
                 
                 </div>
@@ -107,12 +130,15 @@ export default function Ressource(){
 
 
 
-export function ImageItem({image, onClick, id}){
-    
+export function ImageItem({data, onClick, id}){
+    const { categorie, createdAt, createdBy, images, description, titre } = data
+    const imagesFormated = JSON.parse(images)
+
+    console.log(imagesFormated)
     return(
         <div className="ImageItem" onClick={onClick}>
             <div className="col-12 p-0 image" style={{ cursor : 'pointer', position : 'relative', overflow : 'hidden'}}>
-                <img src={image} width = '100%' />  
+                <img src={imagesFormated[0].image} width = '100%' />  
                 <div className="little_menu">
                     <Button icon={<BxsLike style = {{ width : 20, hieght : 20}} />} />
                     <Button icon={<MaterialSymbolsCloudDownloadRounded style = {{ width : 20, hieght : 20}} />}/>
@@ -120,7 +146,7 @@ export function ImageItem({image, onClick, id}){
             </div> 
             <div className="descrition">
                 <div className="title">
-                    Le titre de la realisation
+                    {titre}
                 </div>
                 <div className="icon">
                     <MdiShare style = {{ width : 24, hieght : 24}} />

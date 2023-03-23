@@ -1849,6 +1849,77 @@ img, svg {
 .inscription_section .cadre.desc > .content ul {
     padding-left: 1rem;
 }
+
+@media (max-width : 756px) {
+    .inscription_section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inscription_section .cadre {
+        flex: 1;
+    }
+    .inscription_section .cadre > .titre {
+       margin-bottom: 16px;
+    }
+    .inscription_section .cadre > div:last-child {
+       font-size: 16px;
+    }
+    
+    .inscription_section .cadre.desc {
+        background-color: #f3f3f3;
+        position: relative;
+        height: 700px;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+    
+    .inscription_section .cadre.desc > .footer, 
+    .inscription_section .cadre.desc > .header
+    {
+        display: flex ;
+        height: 58px;
+        width: 100%;
+    }
+    
+    .inscription_section .cadre.desc > .footer {
+        font-size: large;
+        border: none;
+        outline: 1px solid transparent;
+        background-color: #c12227;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    
+    .inscription_section .cadre.desc > .header{
+        color: #c12227;
+        align-items: center;
+        padding: 0 36px;
+        font-family: Montserrat ;
+        font-size: 24px;
+        font-weight: 700;
+        height: 96px;
+    }
+    
+    .inscription_section .cadre.desc > .content {
+        padding: 0 36px;
+        height: 500px;
+    }
+    .inscription_section .cadre.desc > .content  li+li {
+        margin-top: 12px;
+    }
+    .inscription_section .cadre.desc > .content * {
+        font-size: 16px;
+    }
+    .inscription_section .cadre.desc > .content ul {
+        padding-left: 1rem;
+    }
+}
 .col{
     color: #992a36;
     padding: 24px;
@@ -2197,7 +2268,6 @@ background-color: #f1f1f1;
 .cible .right .ligne .icon {
     display: flex;
     align-items: center;
-    justify-content: center ;
     font-size: 24px;
     font-weight: 600;
     border-right: 1px solid silver;
@@ -2351,7 +2421,7 @@ background-color: #f1f1f1;
     display: flex;
 }
 #ressource .ressource .option {
-    width: 350px;   
+    width: 300px;   
     padding-right: 24px;
 }
 #ressource .ressource .column {
@@ -2774,3 +2844,191 @@ background-color: #f1f1f1;
 
 
 /* Fin Notification View */
+
+
+/* New_ressource */
+
+#newRessource .container {
+    display: flex;
+    height: calc(100vh - 62px);
+    width: 100%;
+    padding: 1.5rem 0;
+    gap: 1rem;
+}
+#newRessource .container .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+#newRessource .container .left .header {
+   font-size: 2rem;
+   font-weight: 600;
+   padding-bottom: 18px ;
+}
+#newRessource .container .left .content {
+   flex: 1;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+#newRessource .container .left .content_ressource {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   
+}
+#newRessource .container .left .content .ImageRessource {
+    height: 200px;
+    width: auto;
+    position: relative;
+}
+#newRessource .container .left .content .ImageRessource button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all .2s ease-in-out;
+}
+
+#newRessource .container .left .content .ImageRessource:hover button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#newRessource .container .left .content .ImportImages {
+   display: flex;
+   width: 200px;
+   height: 200px;
+   border: 3px solid #efefef;
+   border-radius: 12px;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   position: relative;
+   flex-direction: column;
+}
+
+#newRessource .container .left .content .ImportImages input {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border: 1px solid;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+#newRessource .container .left .content .ImportImages input::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+#newRessource .container .right {
+    width: 40%;
+    background-color: #f3f3f3;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#newRessource .container .right .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+}
+#newRessource .container .right .content .titre_ressource input {
+    width: 100%;
+    font-size: large;
+    padding: 12px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+#newRessource .container .right .content .descrption_ressource {
+    flex: 1;
+}
+#newRessource .container .right .content .descrption_ressource textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 18px;
+    padding: 12px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 400;
+}
+#newRessource .container .right .content .categorie {
+    width: 100%;
+    height: 70px;
+}
+#newRessource .container .right .content .categorie select {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    border-radius: 24px;
+    margin-top: 7px;
+}
+#newRessource .container .right .content .categorie option {
+    padding:12px;
+    height: 24px;
+}
+
+
+#newRessource .container .right .content .details {
+    padding:12px;
+    background-color: #00000020;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: .8rem;
+    display: flex;
+    gap: 10px;
+}
+
+#newRessource .container .right .content .details .champ {
+    width: 40%;
+}
+
+#newRessource .container .right .content .details .champ span:first-child {
+    display : block;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#newRessource .container .right .btn_publier {
+    width: 100%;
+    height: 52px;
+   
+}
+
+#newRessource .container .right .btn_publier button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c12227;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+/* fin new ressource */

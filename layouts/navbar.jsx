@@ -52,7 +52,7 @@ export default function NavBar(){
             <Container cName={'d-flex'}>
                 <div className="logo">
                     <div>
-                        <img src="./assets/icon/i3de_logo.png" width= {85}  alt="logo i3de" />
+                        <img src="/assets/icon/i3de_logo.png" width= {85}  alt="logo i3de" />
                     </div>
                 </div>
                 <div className="icon-right d-flex">
